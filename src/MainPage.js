@@ -60,10 +60,10 @@ function MainPage() {
             const gridWidth2 = gridItem2.w;
             const gridHeight1 = gridItem1.h;
             const gridHeight2 = gridItem2.h;
-            const videoWidth1 = gridWidth1 * 830;
-            const videoWidth2 = gridWidth2 * 830;
-            const videoHeight1 = gridHeight1 * 340;
-            const videoHeight2 = gridHeight2 * 340;
+            const videoWidth1 = gridWidth1 * 850;
+            const videoWidth2 = gridWidth2 * 850;
+            const videoHeight1 = gridHeight1 * 350;
+            const videoHeight2 = gridHeight2 * 350;
 
             videoElement1.width = videoWidth1;
             videoElement1.height = videoHeight1;
@@ -110,7 +110,10 @@ function MainPage() {
                     <h2 className="chart_title">People Capacity per 1 square meter of space</h2>
                     <PolarArea className="chart" data={data}/>
                 </div>
-                <div key="risk-level"></div>
+                <div key="risk-level">
+                    <h2 className="chart_title">Risk Analysis</h2>
+
+                </div>
             </GridLayout>
         </div>
     )
