@@ -53,17 +53,17 @@ function MainPage() {
     const setVideoSize = () => {
         const videoElement1 = videoRef1.current;
         const videoElement2 = videoRef2.current;
-        if (videoElement1 && videoElement2) {
+        if (videoElement1) {
             const gridItem1 = gridLayout.find((item) => item.i === "lidar");
             const gridItem2 = gridLayout.find((item) => item.i === "camera");
             const gridWidth1 = gridItem1.w;
             const gridWidth2 = gridItem2.w;
             const gridHeight1 = gridItem1.h;
             const gridHeight2 = gridItem2.h;
-            const videoWidth1 = gridWidth1 * 850;
-            const videoWidth2 = gridWidth2 * 850;
-            const videoHeight1 = gridHeight1 * 350;
-            const videoHeight2 = gridHeight2 * 350;
+            const videoWidth1 = gridWidth1 * 840;
+            const videoWidth2 = gridWidth2 * 840;
+            const videoHeight1 = gridHeight1 * 360;
+            const videoHeight2 = gridHeight2 * 360;
 
             videoElement1.width = videoWidth1;
             videoElement1.height = videoHeight1;
@@ -95,16 +95,22 @@ function MainPage() {
                     </video>
                 </div>
                 <div key="camera">
-                    <video
+                    {/*<video*/}
+                    {/*    style={{ objectFit: "cover" }}*/}
+                    {/*    muted*/}
+                    {/*    autoPlay*/}
+                    {/*    loop*/}
+                    {/*    ref={videoRef2}*/}
+                    {/*    onCanPlay={() => setPlayBackRate()}*/}
+                    {/*>*/}
+                    {/*    <source src={Video_Camera} type="video/mp4" />*/}
+                    {/*</video>*/}
+                    <img
                         style={{ objectFit: "cover" }}
-                        muted
-                        autoPlay
-                        loop
+                        src="http://localhost:5000/video_feed"
+                        alt = "Video"
                         ref={videoRef2}
-                        onCanPlay={() => setPlayBackRate()}
-                    >
-                        <source src={Video_Camera} type="video/mp4" />
-                    </video>
+                    />
                 </div>
                 <div key="max-capacity">
                     <h2 className="chart_title">People Capacity per 1 square meter of space</h2>
