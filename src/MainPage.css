@@ -5,3 +5,8 @@
 .chart_title {
    text-align: center;
 }
+
+.doughnut {
+    margin: 0 auto;
+    width: 100px;
+}
