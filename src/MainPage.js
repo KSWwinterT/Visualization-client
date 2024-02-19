@@ -126,11 +126,7 @@ function MainPage() {
     };
 
     const determineRiskChartData = () => {
-        const parsedResult = parseInt(inputValue, 10);
 
-        // if(isNaN(parsedResult)) {
-        //     return data2;
-        // }
         if(detectionResult <= 2) {
             return data2;
         } else if(detectionResult <= 4) {
@@ -163,7 +159,7 @@ function MainPage() {
                 <div key="camera">
                     <img
                         style={{ objectFit: "cover" }}
-                        src="http://localhost:5000/video_feed"
+                        src="http://localhost:5000/video_stream"
                         alt = "Video"
                         ref={videoRef}
                     />
