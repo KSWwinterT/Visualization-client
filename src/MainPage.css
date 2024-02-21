@@ -4,9 +4,28 @@
 
 .chart_title {
    text-align: center;
+    cursor: pointer; /* 포인터 커서로 변경하여 사용자에게 클릭 가능성을 알림 */
+    outline: none; /* 포커스 시 기본 아웃라인 제거 */
+}
+
+.chart_title:hover {
+    text-decoration: underline;
 }
 
 .doughnut {
     margin: 0 auto;
     width: 200px;
 }
+
+.detection-result {
+    margin: 0 auto;
+}
+
+.submitBtn {
+    width: 100px;
+}
+
+.chart_title {
+
+}
+
